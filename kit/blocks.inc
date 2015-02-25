@@ -30,7 +30,7 @@ function insert_block($tag, $content, $id=NULL, $classes=NULL) {
 	echo $temp.'>';
 
 	//including the content object specified
-	$content = $_SERVER["DOCUMENT_ROOT"].'/content/'.$content.'.block.inc';
+	$content = 'content/'.$content.'.block.inc';
 
 	require $content;
 
@@ -53,7 +53,7 @@ Example: if 'teaser1' was passed in, the code will look for 'teaser1.raw.inc' in
 */
 function insert_raw($content){
 	//including the raw html content specified
-	$content = $_SERVER["DOCUMENT_ROOT"].'/content/'.$content.'.raw.inc';
+	$content = 'content/'.$content.'.raw.inc';
 	require $content;
 }
 ?>
